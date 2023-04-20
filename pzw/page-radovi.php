@@ -18,11 +18,19 @@
 
             while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 
-                <a href="<?php echo get_permalink(); ?>">
+            <div class="radovi-card">
 
-                    <?php the_post_thumbnail(); ?>
+                <div class="radovi-image">
+                    <a href="<?php echo get_permalink(); ?>">
+                        <?php the_post_thumbnail(); ?>
+                    </a>
+                </div>
 
-                </a>
+                <div class="radovi-description">
+                    <a class="read-more" href="<?php echo get_permalink(); ?>">Pročitaj više</a>
+                </div>
+
+            </div>
 
             <?php endwhile;
 
